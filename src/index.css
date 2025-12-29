@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 10 10 10; /* #0A0A0A */
+    --foreground: 255 255 255;
+    
+    --card: 18 18 18;
+    --card-foreground: 255 255 255;
+ 
+    --primary: 212 175 55;
+    --primary-foreground: 10 10 10;
+ 
+    --secondary: 30 30 30;
+    --secondary-foreground: 255 255 255;
+ 
+    --muted: 30 30 30;
+    --muted-foreground: 160 160 160;
+ 
+    --accent: 212 175 55; /* #D4AF37 */
+    --accent-foreground: 10 10 10;
+    
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-800;
+  }
+  body {
+    @apply bg-[#0A0A0A] text-white font-sans antialiased;
+    background-color: #0A0A0A;
+    color: #ffffff;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+.text-gold {
+  color: #D4AF37;
+}
+
+.bg-gold {
+  background-color: #D4AF37;
+}
+
+.border-gold {
+  border-color: #D4AF37;
+}
+
+.hover-gold-glow:hover {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
