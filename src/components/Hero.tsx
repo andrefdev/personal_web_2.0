@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 export default function Hero() {
   return (
     <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Image with Overlay (Commented Out)
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <img 
@@ -14,6 +14,25 @@ export default function Hero() {
           className="w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent z-20"></div>
+      </div>
+      */}
+
+      {/* New Grain Background */}
+      <div className="absolute inset-0 z-0 bg-[#0A0A0A]">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1a1a1a] via-[#0A0A0A] to-black opacity-80"></div>
+        <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
+          <svg className='w-full h-full' xmlns='http://www.w3.org/2000/svg'>
+            <filter id='noiseFilter'>
+              <feTurbulence 
+                type='fractalNoise' 
+                baseFrequency='0.8' 
+                numOctaves='3' 
+                stitchTiles='stitch'/>
+              <feColorMatrix type="saturate" values="0"/>
+            </filter>
+            <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
+          </svg>
+        </div>
       </div>
 
       <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
