@@ -5,27 +5,11 @@ const articles = [
   {
     platform: "Medium",
     date: "Dec 2024",
-    title: "Por qué tus metas de año nuevo fallarán (y qué hacer al respecto)",
-    excerpt: "La fuerza de voluntad es un recurso finito. Aprende a construir entornos que hagan el éxito inevitable.",
-    link: "https://medium.com/", // Placeholder
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800"
+    title: "So, 2025 is over and this is what i learned that can help you.",
+    excerpt: "I'll tell you the best things i learned in 2025, for you, your business and more.",
+    link: "https://medium.com/@andreforsythx/so-2025-is-over-and-this-is-what-i-learned-that-can-help-you-77a02cfaa81e", // Placeholder
+    image: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*yKMih8RCryK8IzWCEGJEkw.png"
   },
-  {
-    platform: "Substack",
-    date: "Nov 2024",
-    title: "Automatización Consciente: Recupera 10 horas semanales",
-    excerpt: "Herramientas no-code y scripts simples para eliminar la fricción administrativa de tu negocio.",
-    link: "https://substack.com/", // Placeholder
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
-  },
-  {
-    platform: "Hashnode",
-    date: "Oct 2024",
-    title: "El interés compuesto aplicado a los hábitos",
-    excerpt: "Cómo pequeñas acciones diarias generan retornos exponenciales en tu salud, riqueza y conocimiento.",
-    link: "https://hashnode.com/", // Placeholder
-    image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=800"
-  }
 ];
 
 export default function Blog() {
@@ -56,24 +40,24 @@ export default function Blog() {
               className="group block bg-[#141414] border border-white/5 hover:border-gold/30 transition-all duration-300 overflow-hidden"
             >
               <div className="h-48 overflow-hidden relative">
-                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10"></div>
-                 <img 
-                   src={article.image} 
-                   alt={article.title}
-                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
-                 />
-                 <span className="absolute top-4 right-4 z-20 text-[10px] font-bold bg-black/80 text-white px-3 py-1 uppercase tracking-wider backdrop-blur-sm border border-white/10">
-                   {article.platform}
-                 </span>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10"></div>
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
+                <span className="absolute top-4 right-4 z-20 text-[10px] font-bold bg-black/80 text-white px-3 py-1 uppercase tracking-wider backdrop-blur-sm border border-white/10">
+                  {article.platform}
+                </span>
               </div>
-              
+
               <div className="p-6">
                 <div className="flex items-center gap-4 mb-4 text-xs text-gray-500">
                   <span>{article.date}</span>
                   <span className="w-1 h-1 bg-gray-500 rounded-full"></span>
                   <span className="flex items-center gap-1"><BookOpen size={12} /> Lectura de 5 min</span>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-gold transition-colors leading-tight">
                   {article.title}
                 </h3>
@@ -88,9 +72,9 @@ export default function Blog() {
             </motion.a>
           ))}
         </div>
-        
+
         <div className="mt-8 text-center md:hidden">
-             <a href="#" className="inline-flex items-center gap-2 text-gold hover:text-white transition-colors text-sm uppercase tracking-wider font-bold">
+          <a href="#" className="inline-flex items-center gap-2 text-gold hover:text-white transition-colors text-sm uppercase tracking-wider font-bold">
             Ver todas las publicaciones <ExternalLink size={16} />
           </a>
         </div>
